@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <p>
+            <label>Chuyển Đổi: </label>
+            <input type="number" id="feetToMeter" placeholder="feetToMeter" oninput="feetToMeterConverter(this.value)">
+            <input type="number" id="meterToFeet" placeholder="meterToFeet" oninput="meterTofeetConverter(this.value)">
+
+        </p>
+        <!-- <p>Celsius: <span id="outputCelsius"></span></p> -->
+        <script>
+            function feetToMeterConverter(value) {
+                var foot = document.getElementById("feetToMeter").value;
+                document.getElementById("meterToFeet").value = (0.305 * foot);
+            }
+            function meterTofeetConverter(value) {
+                var meter = document.getElementById("meterToFeet").value;
+                document.getElementById("feetToMeter").value = (3.279 * meter);
+            }
+
+
+        </script>
+    </form>
+</body>
+
+</html>

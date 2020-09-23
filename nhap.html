@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="sum"></h3>
+    <script>
+        function generateArray(size) {
+            let arr = [];
+            for (let i = 0; i < size; i++) {
+                arr[i] = Math.floor(Math.random() * 90 - 10);
+            }
+            return arr;
+        }
+        function printArray(arr) {
+            return arr.join(',');
+        }
+        function sumArray(arr) {
+            let s = 0;
+            for (let i = 0; i < arr.length; i++) {
+                s += arr[i];
+            }
+            return s;
+        }
+        function totalodd(arr) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 == 0) {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        function inputSize() {
+            let size = 0;
+            do {
+                size = +prompt('input size: ');
+            }
+            while (!Number.isInteger(size))
+            return size;
+        }
+        function print(smg) {
+            document.write(smg + "<br>");
+        }
+        function main() {
+            let n = 5;
+            for (let i = 0; i < n; i++) {
+                let size = inputSize();
+                let array = generateArray(size);
+                print("mang duoc tao la: " + printArray(array) + "<br>");
+                print("tong cac gia tri cua mang la: " + sumArray(array) + "<br>");
+                print("so luong cac so chan la: " + totalodd(array) + "<br>");
+
+
+
+            }
+        }
+        main();
+    </script>
+</body>
+
+</html>

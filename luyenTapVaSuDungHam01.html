@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <p>bài1</p>
+    <script>
+        function alertmessage() {
+            alert('Xin chao');
+        }
+
+        alertmessage();
+    </script> -->
+
+    <!-- <script>
+        let b = +prompt('nhap b=');
+        document.write(myfunction(b));
+        function myfunction(a) {
+            return a += 1;
+        }
+    </script> -->
+    <!-- <script>
+        let a = +prompt('nhap vao a=');
+        let b = +prompt('nhap vao b=');
+        function myfunction(a, b) {
+            let s = 0;
+            arr = [];
+            if (a > b) {
+                alert('a>b');
+            }
+            if (a <= b) {
+                s = a + b;
+                arr.push(s);
+            }
+            return arr;
+        }
+        myfunction(a, b);
+    </script> -->
+    <!-- <script>
+        function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            return result;
+
+        }
+        result = 0;
+        alert(result);
+        result = addNumbers();
+        alert(result);
+    </script> -->
+
+
+    <script>
+        let nameStar = prompt('nhap ten ngoi sao');
+        let A = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let B = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+        let str = "";
+        function checkNameStar() {
+            for (i = 0; i < A.length; i++) {
+                if (nameStar == A[i]) {
+                    str = B[i];
+                }
+            }
+
+            if (str == "") {
+                return " Không tìm thấy";
+            } else {
+                return str;
+            }
+
+        }
+
+        document.write(checkNameStar());
+    </script>
+</body>
+
+</html>
